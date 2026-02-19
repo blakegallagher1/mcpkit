@@ -1,0 +1,257 @@
+Security and Privacy Scanner
+Beta
+Run a scan to check for potential security risks and privacy leaks in your application. Scans are typically complete within minutes. Learn more
+194 potential vulnerabilities found.
+Last ran on
+ 
+10:24 pm, Feb 18, 2026
+Security
+Outdated dependencies have known vulnerabilities
+There are dependencies that have vulnerabilities and may need to be updated.
+These dependencies can be updated automatically.
+cross-spawn@7.0.3 -> 7.0.5
+next@14.2.11 -> 14.2.35
+next@14.2.11 -> 14.2.15
+next@14.2.11 -> 14.2.34
+body-parser@1.20.2 -> 1.20.3
+http-proxy-middleware@2.0.6 -> 2.0.7
+jsonpath@1.1.1 -> 1.2.1
+node-forge@1.3.1 -> 1.3.2
+node-forge@1.3.1 -> 1.3.2
+path-to-regexp@0.1.7 -> 0.1.12
+qs@6.11.0 -> 6.14.1
+next@15.0.3 -> 15.0.5
+next@15.0.3 -> 15.0.8
+next@15.3.1 -> 15.0.5
+next@15.3.1 -> 15.0.8
+tar-fs@3.0.8 -> 3.1.1
+@modelcontextprotocol/sdk@1.12.1 -> 1.26.0
+@modelcontextprotocol/sdk@1.12.1 -> 1.25.2
+@modelcontextprotocol/sdk@1.12.1 -> 1.24.0
+next@15.3.3 -> 15.0.5
+next@15.3.3 -> 15.0.8
+qs@6.14.0 -> 6.14.1
+next@15.4.3 -> 15.0.5
+next@15.4.3 -> 15.0.8
+next@15.2.4 -> 15.0.5
+next@15.2.4 -> 15.0.8
+tar@7.5.1 -> 7.5.7
+tar@7.5.1 -> 7.5.8
+tar@7.5.1 -> 7.5.3
+tar@7.5.1 -> 7.5.4
+@modelcontextprotocol/sdk@1.25.2 -> 1.26.0
+hono@4.11.3 -> 4.11.4
+hono@4.11.3 -> 4.11.4
+@isaacs/brace-expansion@5.0.0 -> 5.0.1
+astro@5.14.1 -> 5.15.8
+devalue@5.3.2 -> 5.6.2
+devalue@5.3.2 -> 5.6.2
+glob@11.0.3 -> 11.1.0
+h3@1.15.4 -> 1.15.5
+astro@5.5.6 -> 5.15.8
+tar@7.4.3 -> 7.5.7
+tar@7.4.3 -> 7.5.8
+tar@7.4.3 -> 7.5.3
+tar@7.4.3 -> 7.5.4
+react-router@7.8.2 -> 7.12.0
+react-router@7.8.2 -> 7.9.0
+react-router@7.8.2 -> 7.12.0
+axios@1.7.8 -> 1.13.5
+axios@1.7.8 -> 1.12.0
+axios@1.7.8 -> 1.8.2
+tar-fs@3.0.6 -> 3.1.1
+@babel/traverse@7.22.11 -> 7.23.2
+axios@1.6.2 -> 1.13.5
+axios@1.6.2 -> 1.12.0
+axios@1.6.2 -> 1.8.2
+braces@3.0.2 -> 3.0.3
+wrangler@3.78.9 -> 3.114.17
+@babel/traverse@7.22.20 -> 7.23.2
+body-parser@1.20.1 -> 1.20.3
+@babel/traverse@7.22.15 -> 7.23.2
+next@14.2.25 -> 14.2.35
+next@14.2.25 -> 14.2.34
+semver@7.3.8 -> 7.5.2
+solid-js@1.7.11 -> 1.9.4
+jws@3.2.2 -> 3.2.3
+qs@6.13.0 -> 6.14.1
+These dependencies may cause issues if updated without making additional changes. You can have the Agent update them for you and make any necessary changes.
+form-data@4.0.0 -> 2.5.4
+h11@0.14.0 -> 0.16.0
+glob@10.3.10 -> 11.1.0
+next@14.2.11 -> 13.5.9
+next@14.2.11 -> 15.0.8
+pdfjs-dist@2.16.105 -> 4.2.67
+tar@6.2.1 -> 7.5.7
+tar@6.2.1 -> 7.5.8
+tar@6.2.1 -> 7.5.3
+tar@6.2.1 -> 7.5.4
+tar-fs@2.1.1 -> 1.16.5
+tar-fs@2.1.1 -> 1.16.4
+tar-fs@2.1.1 -> 3.1.1
+glob@10.4.5 -> 11.1.0
+form-data@3.0.1 -> 2.5.4
+nth-check@1.0.2 -> 2.0.1
+path-to-regexp@0.1.7 -> 1.9.0
+next@15.0.3 -> 13.5.9
+next@15.0.3 -> 14.2.34
+jinja2@3.1.4 -> 3.1.5
+jinja2@3.1.4 -> 3.1.5
+pillow@11.0.0 -> 12.1.1
+protobuf@5.28.3 -> 6.33.5
+protobuf@5.28.3 -> 4.25.8
+tornado@6.4.2 -> 6.5
+urllib3@2.2.3 -> 2.6.0
+urllib3@2.2.3 -> 2.6.3
+urllib3@2.2.3 -> 2.6.0
+form-data@4.0.2 -> 2.5.4
+next@15.3.1 -> 14.2.34
+tar-fs@2.1.2 -> 1.16.5
+tar-fs@2.1.2 -> 3.1.1
+tar-fs@3.0.8 -> 1.16.5
+form-data@4.0.3 -> 2.5.4
+next@15.3.3 -> 14.2.34
+aiohttp@3.12.13 -> 3.13.3
+nbconvert@7.16.6 -> 7.17.0
+pillow@11.2.1 -> 12.1.1
+pillow@11.2.1 -> 11.3.0
+urllib3@2.5.0 -> 2.6.0
+urllib3@2.5.0 -> 2.6.3
+urllib3@2.5.0 -> 2.6.0
+next@15.4.3 -> 14.2.34
+next@15.2.4 -> 14.2.34
+mcp@1.16.0 -> 1.23.0
+python-multipart@0.0.20 -> 0.0.22
+starlette@0.48.0 -> 0.49.1
+aiohttp@3.12.15 -> 3.13.3
+cryptography@45.0.7 -> 46.0.5
+protobuf@5.29.5 -> 6.33.5
+starlette@0.47.2 -> 0.49.1
+fastmcp@0.1.0 -> 2.13.0
+mcp@0.1.0 -> 1.9.4
+mcp@0.1.0 -> 1.23.0
+mcp@0.1.0 -> 1.10.0
+@modelcontextprotocol/sdk@0.5.0 -> 1.25.2
+@modelcontextprotocol/sdk@0.5.0 -> 1.24.0
+tar-fs@3.0.6 -> 1.16.5
+tar-fs@3.0.6 -> 1.16.4
+ws@8.14.1 -> 5.2.4
+next@14.2.25 -> 15.0.8
+path-to-regexp@6.1.0 -> 1.9.0
+path-to-regexp@6.2.1 -> 1.9.0
+semver@6.1.1 -> 7.5.2
+seroval@0.5.1 -> 1.4.1
+seroval@0.5.1 -> 1.4.1
+seroval@0.5.1 -> 1.4.1
+seroval@0.5.1 -> 1.4.1
+seroval@0.5.1 -> 1.4.1
+tar@6.1.15 -> 7.5.7
+tar@6.1.15 -> 7.5.8
+tar@6.1.15 -> 7.5.3
+tar@6.1.15 -> 7.5.4
+jws@4.0.0 -> 3.2.3
+mcp@1.0.0b6 -> 1.9.4
+mcp@1.0.0b6 -> 1.23.0
+mcp@1.0.0b6 -> 1.10.0
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a command injection vulnerability.
+Security
+Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a command injection vulnerability.
+Security
+Vite version detected is vulnerable to CVE-2025-30208. The vulnerability is patched in versions: 6.2.3, 6.1.2, 6.0.12, 5.4.15, and 4.5.10. Please upgrade to a patched version.
+Security
+Vite version detected is vulnerable to CVE-2025-30208. The vulnerability is patched in versions: 6.2.3, 6.1.2, 6.0.12, 5.4.15, and 4.5.10. Please upgrade to a patched version.
+Security
+A gitleaks Openai API Key detected. Avoid hardcoding credentials directly in connection strings as this creates security risks. Instead, use environment variables to store and access credentials at runtime. If you need the actual credential values to make this work properly, ask me to provide them through Replit's secret system.
+Security
+Detected calls to child_process from a function argument `cmd`. This could lead to a command injection if the input is user controllable. Try to avoid calls to child_process, and if it is needed ensure user input is correctly sanitized or sandboxed.
+Security
+Found '$SPAWN' with '{shell: true}'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use '{shell: false}' instead.
+Security
+Detected calls to child_process from a function argument `cmd`. This could lead to a command injection if the input is user controllable. Try to avoid calls to child_process, and if it is needed ensure user input is correctly sanitized or sandboxed.
+Security
+XSS Vulnerability: Unsafe DOM Manipulation. User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities. Replace with safe DOM methods: Use createElement() + appendChild() + textContent for dynamic content. Avoid use innerHTML with user data: Even escaped data can be risky. If HTML injection is absolutely necessary: Sanitize with DOMPurify library first.
+Security
+XSS Vulnerability: Unsafe DOM Manipulation. User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities. Replace with safe DOM methods: Use createElement() + appendChild() + textContent for dynamic content. Avoid use innerHTML with user data: Even escaped data can be risky. If HTML injection is absolutely necessary: Sanitize with DOMPurify library first.
+Security
+Detected subprocess function 'Popen' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is not controllable by an external resource. You may consider using 'shlex.escape()'.
+Security
+Found dynamic content when spawning a process. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Ensure no external data reaches here.
+Security
+Detected user input entering a `subprocess` call unsafely. This could result in a command injection vulnerability. An attacker could use this vulnerability to execute arbitrary commands on the host, which allows them to download malware, scan sensitive data, or run any command they wish on the server. Do not let users choose the command to run. In general, prefer to use Python API versions of system commands. If you must use subprocess, use a dictionary to allowlist a set of commands.
+Security
+Detected subprocess function 'run' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is not controllable by an external resource. You may consider using 'shlex.escape()'.
+Security
+Detected asyncio subprocess function without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is not controllable by an external resource. You may consider using 'shlex.escape()'.
+Security
+Detected asyncio subprocess function without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is not controllable by an external resource. You may consider using 'shlex.escape()'.
+Security
+Detected 'create_subprocess_exec' function without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is not controllable by an external resource. You may consider using 'shlex.escape()'.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+Avoid executing dynamically constructed SQL strings as this bypasses SQLAlchemy's SQL injection protections. Dynamic string construction makes the query vulnerable when user input is involved. Use `execute(text("... :param_name"), param_name=value)` with named parameters instead of f-strings/concatenation to ensure proper escaping.
+Security
+JWT token detected in source code. Avoid hardcoding tokens directly in your code, even if they are public or anonymous keys. Instead, use environment variables to store and access tokens at runtime. If you need the actual token values to make this work properly, ask me to provide them through Replit's secret system.
+Security
+A gitleaks Generic API Key detected. Avoid hardcoding credentials directly in connection strings as this creates security risks. Instead, use environment variables to store and access credentials at runtime. If you need the actual credential values to make this work properly, ask me to provide them through Replit's secret system.
+Privacy
+Auth Token exposed via Websocket Websocket
+Privacy
+Auth Token exposed to OpenAI OpenAI
+Privacy
+Auth Token exposed to Logs Logs
+Privacy
+Auth Token exposed to Files Files
+Privacy
+Auth Token exposed to Files Files
+Privacy
+Auth Token exposed via LiteLLM LiteLLM
+Privacy
+Auth Token exposed to Local Storage Local Storage
+Privacy
+Auth Token exposed to Local Storage Local Storage
+Privacy
+Auth Token exposed to Standard Output Standard Output
+Privacy
+Auth Token exposed to OpenAI OpenAI

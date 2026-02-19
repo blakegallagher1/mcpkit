@@ -1,0 +1,45 @@
+modules = ["nodejs-20", "python-3.11"]
+[agent]
+expertMode = true
+integrations = ["github:1.0.0"]
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+PORT = "5000"
+RESOURCE_SERVER_URL = "https://openai-mcpkit.replit.app"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "MCP Server (TypeScript)"
+
+[[workflows.workflow]]
+name = "MCP Server (TypeScript)"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd typescript-authenticated-mcp-server-scaffold && npm run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["bash", "-c", "cd typescript-authenticated-mcp-server-scaffold && npx tsx src/server.ts"]

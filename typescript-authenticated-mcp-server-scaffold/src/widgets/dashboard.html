@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #ffffff; color: #1a1a1a; padding: 20px; }
+  .header { margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .header h1 { font-size: 17px; font-weight: 600; color: #111827; }
+  .header .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-bottom: 16px; }
+  .metric { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; }
+  .metric .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 4px; }
+  .metric .val { font-size: 24px; font-weight: 700; color: #0f172a; }
+  .metric .sub { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+  .section-title { font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.3px; }
+  .items { display: flex; flex-direction: column; gap: 8px; }
+  .item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; }
+  .item .title { font-size: 14px; font-weight: 600; color: #1e40af; margin-bottom: 4px; }
+  .item .body { font-size: 13px; color: #475569; line-height: 1.5; }
+  .tag { display: inline-block; background: #eff6ff; color: #1d4ed8; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; margin: 2px 2px 2px 0; }
+  .empty { text-align: center; padding: 32px 16px; }
+  .empty h2 { font-size: 15px; font-weight: 600; color: #6b7280; margin-bottom: 6px; }
+  .empty p { font-size: 13px; color: #9ca3af; line-height: 1.5; }
+  .json-view { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-family: 'SF Mono', Menlo, monospace; font-size: 12px; color: #334155; white-space: pre-wrap; word-break: break-word; overflow: auto; max-height: 400px; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="header">
+    <span class="dot"></span>
+    <h1>MCPKit Dashboard</h1>
+  </div>
+  <div id="content">
+    <div class="empty">
+      <h2>Ready for data</h2>
+      <p>Ask for airfare trends or search expert call transcripts.<br>Results will appear here.</p>
+    </div>
+  </div>
+</div>
+<script>
+  function init() {
+    var toolOutput = window.openai && window.openai.toolOutput;
+    if (toolOutput) {
+      var sc = toolOutput.structuredContent;
+      var meta = toolOutput._meta;
+      var data = sc || meta || toolOutput;
+      renderData(data);
+    }
+  }
+
+  window.addEventListener('message', function(event) {
+    try {
+      var msg = event.data;
+      if (msg && msg.jsonrpc === '2.0' && msg.method === 'ui/notifications/tool-result') {
+        var params = msg.params || {};
+        renderData(params.structuredContent || params._meta || params);
+      }
+    } catch (e) {}
+  });
+
+  function renderData(data) {
+    if (!data) return;
+    var el = document.getElementById('content');
+
+    if (data.rows) {
+      renderTrends(el, data);
+    } else if (data.results) {
+      renderSearch(el, data);
+    } else if (data.session || data.sessions) {
+      renderSession(el, data);
+    } else if (data.dashboard === true || data.view === 'overview') {
+      renderOverview(el, data);
+    } else {
+      renderGeneric(el, data);
+    }
+  }
+
+  function renderTrends(el, data) {
+    var html = '<div class="metrics">';
+    html += metric('Total Routes', data.total_rows || 0);
+    html += metric('Matched', data.matched_rows || 0);
+    html += metric('Returned', data.rows_returned || 0);
+    html += metric('Files', (data.available_files || []).length);
+    html += '</div>';
+
+    var rows = (data.rows || []).slice(0, 12);
+    if (rows.length > 0) {
+      html += '<div class="section-title">Route Data</div><div class="items">';
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        var title = r.route || r.origin_airport || ('Route ' + (i + 1));
+        var tags = '';
+        var keys = Object.keys(r);
+        for (var j = 0; j < keys.length; j++) {
+          if (keys[j] !== 'route' && keys[j] !== 'origin_airport') {
+            tags += '<span class="tag">' + esc(keys[j]) + ': ' + esc(String(r[keys[j]])) + '</span>';
+          }
+        }
+        html += '<div class="item"><div class="title">' + esc(title) + '</div><div class="body">' + tags + '</div></div>';
+      }
+      html += '</div>';
+    }
+    el.innerHTML = html;
+  }
+
+  function renderSearch(el, data) {
+    var items = data.results || [];
+    var html = '<div class="metrics">';
+    html += metric('Results', items.length);
+    html += metric('Query', data.query || '-');
+    html += '</div>';
+
+    if (items.length > 0) {
+      html += '<div class="section-title">Search Results</div><div class="items">';
+      for (var i = 0; i < items.length; i++) {
+        var r = items[i];
+        var title = r.title || r.id || ('Result ' + (i + 1));
+        var text = r.text || r.snippet || '';
+        if (text.length > 250) text = text.substring(0, 250) + '...';
+        var extra = '';
+        if (r.score) extra += '<span class="tag">score: ' + r.score + '</span>';
+        if (r.file_id) extra += '<span class="tag">id: ' + esc(r.file_id) + '</span>';
+        html += '<div class="item"><div class="title">' + esc(title) + '</div>' + extra + '<div class="body">' + esc(text) + '</div></div>';
+      }
+      html += '</div>';
+    }
+    el.innerHTML = html;
+  }
+
+  function renderSession(el, data) {
+    var s = data.session || data;
+    var html = '<div class="metrics">';
+    if (s.id) html += metric('Session ID', s.id);
+    if (typeof s.itemCount === 'number') html += metric('Items', s.itemCount);
+    if (s.action) html += metric('Action', s.action);
+    html += '</div>';
+
+    if (data.sessions) {
+      html += '<div class="section-title">All Sessions</div><div class="items">';
+      for (var i = 0; i < data.sessions.length; i++) {
+        var sess = data.sessions[i];
+        html += '<div class="item"><div class="title">' + esc(sess.id || sess) + '</div></div>';
+      }
+      html += '</div>';
+    }
+    el.innerHTML = html;
+  }
+
+  function renderOverview(el, data) {
+    var html = '<div class="metrics">';
+    html += metric('Tools', data.toolCount || 8);
+    html += metric('Widgets', data.widgetCount || 1);
+    html += metric('Sessions', data.sessionCount || 0);
+    html += metric('Status', 'Active');
+    html += '</div>';
+    html += '<div class="section-title">Overview</div>';
+    html += '<div class="items"><div class="item"><div class="body">Dashboard is connected and ready. Try searching transcripts or querying airfare trends.</div></div></div>';
+    el.innerHTML = html;
+  }
+
+  function renderGeneric(el, data) {
+    el.innerHTML = '<div class="json-view">' + esc(JSON.stringify(data, null, 2)) + '</div>';
+  }
+
+  function metric(label, val) {
+    return '<div class="metric"><div class="label">' + esc(label) + '</div><div class="val">' + esc(String(val)) + '</div></div>';
+  }
+
+  function esc(s) {
+    if (!s) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
+</body>
+</html>

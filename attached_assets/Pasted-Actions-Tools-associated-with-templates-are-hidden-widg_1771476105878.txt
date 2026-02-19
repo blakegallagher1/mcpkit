@@ -1,0 +1,179 @@
+Actions
+Tools associated with templates are hidden: widget_update_session. Templates tied to hidden tools won't be usable.
+airfare_trend_insights
+Filter structured airfare pricing and demand trend snapshots from local CSV/TSV/JSON files.
+Security schemes
+{
+  "type": "noauth"
+},
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Output template
+ui://widget/dashboard.html
+Invoking message
+Analyzing airfare trends...
+Invoked message
+Trend analysis complete
+Widget accessible
+true
+fetch
+Retrieve the full expert-call transcript text for a given file ID.
+Security schemes
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Invoking message
+Fetching transcript...
+Invoked message
+Transcript retrieved
+manage_session
+Create, retrieve, or clear conversation sessions for persistent memory across tool calls.
+Security schemes
+{
+  "type": "noauth"
+},
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Invoking message
+Managing session...
+Invoked message
+Session updated
+open_dashboard
+Launch the interactive data dashboard widget for visualizing search results and trend data.
+Security schemes
+{
+  "type": "noauth"
+},
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Output template
+ui://widget/dashboard.html
+Invoking message
+Opening dashboard...
+Invoked message
+Dashboard loaded
+Widget accessible
+true
+search
+Semantic search over travel-industry expert call transcripts stored in an OpenAI vector store.
+Security schemes
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Output template
+ui://widget/dashboard.html
+Invoking message
+Searching transcripts...
+Invoked message
+Search complete
+Widget accessible
+true
+transfer_to_search_specialist
+Handoff to the search_specialist agent to handle the request. Handles deep search queries across transcripts.
+Security schemes
+{
+  "type": "noauth"
+},
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Invoking message
+Transferring to search_specialist...
+Invoked message
+Connected to search_specialist
+transfer_to_trends_analyst
+Handoff to the trends_analyst agent to handle the request. Handles complex trend analysis queries.
+Security schemes
+{
+  "type": "noauth"
+},
+{
+  "type": "oauth2",
+  "scopes": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}
+Metadata
+Visibility
+public
+Invoking message
+Transferring to trends_analyst...
+Invoked message
+Connected to trends_analyst
+widget_update_session
+Internal widget hook: update session data from widget interactions.
+Metadata
+Visibility
+private
+Output template
+ui://widget/dashboard.html
+Widget accessible
+true
+Templates
+ui://widget/dashboard.html
+Semantic search over travel-industry expert call transcripts stored in an OpenAI vector store.
+Widget domain is not set for this template. A unique domain is required for app submission.
+openai/widgetPrefersBorder
+true
+openai/widgetCSP
+{
+  "connect_domains": [
+    "https://openai-mcpkit.replit.app/"
+  ],
+  "resource_domains": [
+    "https://cdn.jsdelivr.net"
+  ]
+}

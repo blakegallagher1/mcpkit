@@ -1,0 +1,34 @@
+.DS_Store
+
+# TypeScript MCP server
+typescript-authenticated-mcp-server-scaffold/node_modules/
+typescript-authenticated-mcp-server-scaffold/dist/
+typescript-authenticated-mcp-server-scaffold/.env
+
+# Python MCP server
+python-authenticated-mcp-server-scaffold/.env
+python-authenticated-mcp-server-scaffold/__pycache__/
+python-authenticated-mcp-server-scaffold/server/__pycache__/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+
+# Node.js
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
