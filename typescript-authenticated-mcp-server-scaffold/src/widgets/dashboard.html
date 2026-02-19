@@ -47,6 +47,22 @@
       var meta = toolOutput._meta;
       var data = sc || meta || toolOutput;
       renderData(data);
+    } else {
+      // Retry polling -- Skybridge may not have injected toolOutput yet
+      var attempts = 0;
+      var poller = setInterval(function() {
+        attempts++;
+        var to = window.openai && window.openai.toolOutput;
+        if (to) {
+          clearInterval(poller);
+          var sc = to.structuredContent;
+          var meta = to._meta;
+          renderData(sc || meta || to);
+        } else if (attempts > 50) {
+          // Stop after ~5 seconds
+          clearInterval(poller);
+        }
+      }, 100);
     }
   }
 
