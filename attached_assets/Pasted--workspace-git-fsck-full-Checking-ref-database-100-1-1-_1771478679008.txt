@@ -1,0 +1,104 @@
+~/workspace$ git fsck --full
+Checking ref database: 100% (1/1), done.
+Checking object directories: 100% (256/256), done.
+Checking objects: 100% (4040/4040), done.
+~/workspace$ git repack -a -d --depth=250 --window=250
+git push -u origin main
+Enumerating objects: 4040, done.
+Counting objects: 100% (4040/4040), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3150/3150), done.
+Writing objects: 100% (4040/4040), done.
+Total 4040 (delta 629), reused 4040 (delta 629), pack-reused 0 (from 0)
+Enumerating objects: 4008, done.
+Counting objects: 100% (4008/4008), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3171/3171), done.
+Writing objects: 100% (4008/4008), 54.50 MiB | 5.95 MiB/s, done.
+Total 4008 (delta 600), reused 3977 (delta 576), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (600/600), done.
+remote: fatal: did not receive expected object 4ee487389ae75d39a4ba4e73e10641440aee332f
+error: remote unpack failed: index-pack failed
+To https://github.com/blakegallagher1/mcpkit.git
+ ! [remote rejected] main -> main (failed)
+error: failed to push some refs to 'https://github.com/blakegallagher1/mcpkit.git'
+~/workspace$ git checkout --orphan fresh-main
+git add -A
+git commit -m "Initial commit: MCPKit advanced MCP server"
+git branch -D main
+git branch -m main
+git push -u origin main --force
+Switched to a new branch 'fresh-main'
+[fresh-main (root-commit) 079cfe7] Initial commit: MCPKit advanced MCP server
+ 60 files changed, 8735 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .replit
+ create mode 100644 README.md
+ create mode 100644 _analysis/PATTERNS.md
+ create mode 100644 attached_assets/Pasted-Actions-Tools-associated-with-templates-are-hidden-widg_1771476105878.txt
+ create mode 100644 attached_assets/Pasted-Actions-Tools-associated-with-templates-are-hidden-widg_1771476550950.txt
+ create mode 100644 attached_assets/Pasted-Security-and-Privacy-Scanner-Beta-Run-a-scan-to-check-f_1771475114436.txt
+ create mode 100644 attached_assets/content-1771472578008.md
+ create mode 100644 attached_assets/content-1771472589596.md
+ create mode 100644 attached_assets/content-1771472597945.md
+ create mode 100644 attached_assets/content-1771472605946.md
+ create mode 100644 attached_assets/content-1771472647860.md
+ create mode 100644 attached_assets/image_1771466085743.png
+ create mode 100644 attached_assets/image_1771467095055.png
+ create mode 100644 attached_assets/image_1771469397120.png
+ create mode 100644 attached_assets/image_1771469790433.png
+ create mode 100644 attached_assets/image_1771470150951.png
+ create mode 100644 attached_assets/image_1771476696394.png
+ create mode 100644 attached_assets/image_1771476813097.png
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 replit.md
+ create mode 100644 scripts/upload_expert_calls_to_vector_store.py
+ create mode 100644 synthetic_financial_data/README.md
+ create mode 100644 synthetic_financial_data/analyst_reports/2024-08-19_RenewableInfra_MidYear.md
+ create mode 100644 synthetic_financial_data/analyst_reports/2024-09-05_AI_Semiconductor_SupplyChain.md
+ create mode 100644 synthetic_financial_data/expert_calls/2024-08-12_US_Dermatology_ChannelCheck.txt
+ create mode 100644 synthetic_financial_data/expert_calls/2024-09-03_European_EVs_ExpertPanel.txt
+ create mode 100644 synthetic_financial_data/expert_calls/2024-09-18_Global_Travel_Recovery_Airline.txt
+ create mode 100644 synthetic_financial_data/expert_calls/2024-09-18_Global_Travel_Recovery_Hospitality.txt
+ create mode 100644 synthetic_financial_data/expert_calls/2024-09-18_Global_Travel_Recovery_Tours.txt
+ create mode 100644 synthetic_financial_data/web_search_trends/2024-09-08_connected_fitness.csv
+ create mode 100644 synthetic_financial_data/web_search_trends/2024-09-08_consumer_electronics.csv
+ create mode 100644 synthetic_financial_data/web_search_trends/2024-09-08_renewable_energy_devices.csv
+ create mode 100644 synthetic_financial_data/web_search_trends/2024-09-08_smart_home.csv
+ create mode 100644 synthetic_financial_data/web_search_trends/2024-09-08_us_airfare_trends.csv
+ create mode 100644 synthetic_financial_data/web_search_trends/2025-10-06_us_airfare_trends.csv
+ create mode 100644 synthetic_financial_data/web_search_trends/query_source_log.tsv
+ create mode 100644 synthetic_financial_data/web_search_trends/weekly_trend_summary_2024w36.json
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/.env.example
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/README.md
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/package-lock.json
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/package.json
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/auth.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/config.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/errors.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/guardrails.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/handoffs.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/index.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/mcpAuth.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/session.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/toolFilter.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/toolMeta.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/transport.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/mcp/widgets.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/openaiClient.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/server.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/trends.ts
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/src/widgets/dashboard.html
+ create mode 100644 typescript-authenticated-mcp-server-scaffold/tsconfig.json
+Deleted branch main (was a81201f).
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (68/68), done.
+Writing objects: 100% (73/73), 648.77 KiB | 72.09 MiB/s, done.
+Total 73 (delta 3), reused 69 (delta 3), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/blakegallagher1/mcpkit.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
