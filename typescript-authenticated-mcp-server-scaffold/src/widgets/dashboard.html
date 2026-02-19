@@ -48,7 +48,7 @@
       var data = sc || meta || toolOutput;
       renderData(data);
     } else {
-      // Retry polling — Skybridge may not have injected toolOutput yet
+      // Retry polling -- Skybridge may not have injected toolOutput yet
       var attempts = 0;
       var poller = setInterval(function() {
         attempts++;
