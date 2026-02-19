@@ -22,14 +22,14 @@ Use `synthetic_financial_data/` as a realistic sandbox for pipelines and demos. 
 
 ## What you get in MCPKit
 
-- **Authenticated MCP server scaffolds:** [Python](python-authenticated-mcp-server-scaffold/README.md) and [TypeScript](typescript-authenticated-mcp-server-scaffold/README.md) servers that implement a number of different tools, include Deep Research-compatible `search` and `fetch` tools, apply entitlement checks, and follow the recommended resource/authorization separation model.
+- **Authenticated MCP server scaffolds:** A [TypeScript](typescript-authenticated-mcp-server-scaffold/README.md) server that implements a number of different tools, includes Deep Research-compatible `search` and `fetch` tools, applies entitlement checks, and follows the recommended resource/authorization separation model. (Python scaffold coming soon)
 - **Authorization patterns:** The servers also implement the [MCP authorization specification](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization) pattern of separate resource and authorization servers. For the authorization server, we use an end-to-end Auth0 integration that you can replace with Okta, Azure AD, or an internal IdP by updating JWKS resolution, token validation, and tenant metadata.
 - **Sample data:** A complete `synthetic_financial_data/` bundle with expert-call transcripts, pricing snapshots, and enrichment metadata so you can demo entitlement-aware tools before wiring up production feeds.
 
 ## Reference implementations
 
 - [TypeScript authenticated MCP server](typescript-authenticated-mcp-server-scaffold/README.md)
-- [Python authenticated MCP server](python-authenticated-mcp-server-scaffold/README.md)
+- <a>Python authenticated MCP server (Coming soon)</a>
 
 Both implementations share a consistent API surface, emit structured logs, and lean on Auth0 for token exchange. Replace Auth0 with your preferred authorization provider by updating the server configuration documented in each README.
 

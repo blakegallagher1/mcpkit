@@ -16,11 +16,7 @@ import os
 import sys
 from pathlib import Path
 
-try:
-    from openai import OpenAI, OpenAIError
-except ImportError:  # pragma: no cover - fallback for older SDK versions
-    from openai import OpenAI  # type: ignore
-    from openai.error import OpenAIError  # type: ignore
+from openai import OpenAI, OpenAIError
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
